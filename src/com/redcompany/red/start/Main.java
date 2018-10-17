@@ -1,7 +1,7 @@
 package com.redcompany.red.start;
 
-import com.redcompany.red.transport.Plane;
-import com.redcompany.red.transport.Vehicle;
+import com.redcompany.red.transport.typesoftransport.Plane;
+import com.redcompany.red.transport.typesoftransport.Vehicle;
 
 public class Main {
 

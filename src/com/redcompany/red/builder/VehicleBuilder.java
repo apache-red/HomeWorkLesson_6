@@ -1,7 +1,7 @@
 package com.redcompany.red.builder;
 
 
-import com.redcompany.red.transport.Vehicle;
+import com.redcompany.red.transport.typesoftransport.Vehicle;
 
 public abstract class VehicleBuilder {
 

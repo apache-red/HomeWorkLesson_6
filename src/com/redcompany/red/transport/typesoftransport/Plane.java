@@ -1,4 +1,4 @@
-package com.redcompany.red.transport;
+package com.redcompany.red.transport.typesoftransport;
 
 import com.redcompany.red.transport.behavior.flybehavior.FlyPossibly;
 import com.redcompany.red.transport.behavior.ridebehavior.RidePossibly;
