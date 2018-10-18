@@ -4,4 +4,4 @@
 Определить иерархию видов транспорта.
 Произвести сортировку транспорта по скорости передвижения из точки а в точку б.
 Произвести сортировку транспорта по стоимости проезда.
-![Image alt](https://github.com/apache-red/HomeWorkLesson_4/raw/master/ShowTask.png)
+![Image alt](https://github.com/apache-red/HomeWorkLesson_6/raw/master/ShowTask.png)
