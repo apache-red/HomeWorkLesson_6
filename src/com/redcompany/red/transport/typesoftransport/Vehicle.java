@@ -13,8 +13,14 @@ public abstract class Vehicle {
 
     private boolean personalTransport;
     private int speed;
+    private double ticketPrice;
 
 
+
+
+    public  Vehicle getVehicle(){
+        return Vehicle.this;
+    }
 
 
     public void performFly(){
@@ -37,7 +43,13 @@ public abstract class Vehicle {
 
 
 
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
 
+    public void setTicketPrice(double ticketPrice) {
+        this.ticketPrice = ticketPrice;
+    }
 
     public int getSpeed() {
         return speed;

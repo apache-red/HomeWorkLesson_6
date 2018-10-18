@@ -6,4 +6,6 @@ public class FlyPossibly implements IFlyBehavior {
     public void fly() {
         System.out.println("I can fly!");
     }
+
+
 }
