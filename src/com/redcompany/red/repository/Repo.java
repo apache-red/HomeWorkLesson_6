@@ -25,11 +25,15 @@ public class Repo {
             System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
                     + ", ticket price=" + transportList.get(i).getTicketPrice()
                     + ", speed="+ transportList.get(i).getSpeed());
+
         }
     }
 
     public void sortedDearestTransport() {
+        System.out.println("----------------------------------");
+        System.out.println("Sorting by price:");
         Collections.sort(transportList, new CompareVehicleDearest());
+
     }
 
     class CompareVehicleDearest implements Comparator<Vehicle> {
@@ -40,7 +44,10 @@ public class Repo {
     }
 
     public void sortedSpeedTransport() {
+        System.out.println("----------------------------------");
+        System.out.println("Sorting by speed");
         Collections.sort(transportList, new CompareVehicleSpeed());
+
     }
 
     class CompareVehicleSpeed implements Comparator<Vehicle> {
