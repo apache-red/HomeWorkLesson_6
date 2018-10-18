@@ -5,7 +5,7 @@ import com.redcompany.red.transport.behavior.ridebehavior.RidePossibly;
 public class Bus extends Vehicle {
 
     private double ticketPrice =50;
-
+    private  int speed =60;
 
 
 
@@ -17,6 +17,12 @@ public class Bus extends Vehicle {
 
     public Bus(double ticketPrice) {
         this.ticketPrice = ticketPrice;
+        iRideBehavior = new RidePossibly();
+    }
+
+    public Bus(double ticketPrice, int speed) {
+        this.ticketPrice = ticketPrice;
+        this.speed = speed;
         iRideBehavior = new RidePossibly();
     }
 
@@ -39,6 +45,16 @@ public class Bus extends Vehicle {
         this.ticketPrice = ticketPrice;
     }
 
+
+    @Override
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    @Override
+    public int getSpeed() {
+        return speed;
+    }
 
     @Override
     public String toString() {

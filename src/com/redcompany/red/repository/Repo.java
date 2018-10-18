@@ -23,24 +23,32 @@ public class Repo {
         System.out.println("Quantity objects= " + transportList.size());
         for (int i = 0; i < transportList.size(); i++) {
             System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
-                    + ", ticket price=" + transportList.get(i).getTicketPrice());
+                    + ", ticket price=" + transportList.get(i).getTicketPrice()
+                    + ", speed="+ transportList.get(i).getSpeed());
         }
     }
 
     public void sortedDearestTransport() {
-         Collections.sort(transportList, new CompareVehicle());
+        Collections.sort(transportList, new CompareVehicleDearest());
     }
 
-    class CompareVehicle implements Comparator<Vehicle>{
+    class CompareVehicleDearest implements Comparator<Vehicle> {
         @Override
-        public int compare(Vehicle v1, Vehicle v2){
-            return (int)(v2.getTicketPrice() - v1.getTicketPrice());
+        public int compare(Vehicle v1, Vehicle v2) {
+            return (int) (v2.getTicketPrice() - v1.getTicketPrice());
         }
     }
 
+    public void sortedSpeedTransport() {
+        Collections.sort(transportList, new CompareVehicleSpeed());
+    }
 
-
-
+    class CompareVehicleSpeed implements Comparator<Vehicle> {
+        @Override
+        public int compare(Vehicle v1, Vehicle v2) {
+            return (int) (v2.getSpeed() - v1.getSpeed());
+        }
+    }
 
 
 }

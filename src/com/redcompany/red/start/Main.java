@@ -13,7 +13,7 @@ public class Main {
         Repo repo = new Repo();
 
 
-        Vehicle plane = new Plane();
+        Vehicle plane = new Plane(1001.2, 806);
         repo.addTransportToList(plane);
 
         Vehicle plane2 = new Plane();
@@ -27,5 +27,8 @@ public class Main {
         repo.sortedDearestTransport();
         repo.showTransportList();
 
+
+        repo.sortedSpeedTransport();
+        repo.showTransportList();
     }
 }

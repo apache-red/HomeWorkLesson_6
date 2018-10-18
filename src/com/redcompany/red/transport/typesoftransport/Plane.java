@@ -7,6 +7,7 @@ import com.redcompany.red.transport.behavior.ridebehavior.RidePossibly;
 public class Plane extends Vehicle {
 
     private double ticketPrice =1000;
+    private int speed = 800;
 
 
 
@@ -18,6 +19,13 @@ public class Plane extends Vehicle {
 
     public Plane(double ticketPrice) {
         this.ticketPrice = ticketPrice;
+        iFlyVehicle = new FlyPossibly();
+        iRideBehavior = new RidePossibly();
+    }
+
+    public Plane(double ticketPrice, int speed) {
+        this.ticketPrice = ticketPrice;
+        this.speed = speed;
         iFlyVehicle = new FlyPossibly();
         iRideBehavior = new RidePossibly();
     }
@@ -41,6 +49,16 @@ public class Plane extends Vehicle {
         this.ticketPrice = ticketPrice;
     }
 
+
+    @Override
+    public int getSpeed() {
+        return speed;
+    }
+
+    @Override
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 
     @Override
     public String toString() {
