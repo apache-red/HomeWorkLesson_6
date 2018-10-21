@@ -1,8 +1,7 @@
 package com.redcompany.red.repository;
 
 
-import com.redcompany.red.transport.typesoftransport.Plane;
-import com.redcompany.red.transport.typesoftransport.Vehicle;
+import com.redcompany.red.transport.typesoftransport.general.Vehicle;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,6 +32,8 @@ public class Repo {
         System.out.println("----------------------------------");
         System.out.println("Sorting by price:");
         Collections.sort(transportList, new CompareVehicleDearest());
+        System.out.println("Array was sorted");
+        System.out.println("----------------------------------");
 
     }
 
@@ -47,6 +48,8 @@ public class Repo {
         System.out.println("----------------------------------");
         System.out.println("Sorting by speed");
         Collections.sort(transportList, new CompareVehicleSpeed());
+        System.out.println("Array was sorted");
+        System.out.println("----------------------------------");
 
     }
 
@@ -57,5 +60,10 @@ public class Repo {
         }
     }
 
+
+    public Repo createRepo(){
+        Repo repo = new Repo();
+        return repo;
+    }
 
 }

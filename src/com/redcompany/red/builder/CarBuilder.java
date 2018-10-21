@@ -1,4 +1,7 @@
 package com.redcompany.red.builder;
 
-public class CarBuilder {
+public abstract class CarBuilder {
+
+
+
 }

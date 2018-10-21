@@ -1,4 +1,4 @@
-package com.redcompany.red.transport.typesoftransport;
+package com.redcompany.red.transport.typesoftransport.general;
 
 import com.redcompany.red.transport.behavior.flybehavior.IFlyBehavior;
 import com.redcompany.red.transport.behavior.ridebehavior.IRideBehavior;
@@ -6,9 +6,9 @@ import com.redcompany.red.transport.behavior.swimbehavior.ISwimBehavior;
 
 public abstract class Vehicle {
 
-    IFlyBehavior iFlyVehicle;
-    IRideBehavior iRideBehavior;
-    ISwimBehavior iSwimBehavior;
+    protected IFlyBehavior iFlyVehicle;
+    protected IRideBehavior iRideBehavior;
+    protected ISwimBehavior iSwimBehavior;
 
 
     private boolean personalTransport;
@@ -90,4 +90,8 @@ public abstract class Vehicle {
     public void setPersonalTransport(boolean personalTransport) {
         this.personalTransport = personalTransport;
     }
+
+
+
+
 }

@@ -1,8 +1,9 @@
-package com.redcompany.red.transport.typesoftransport;
+package com.redcompany.red.transport.typesoftransport.air;
 
 
 import com.redcompany.red.transport.behavior.flybehavior.FlyPossibly;
 import com.redcompany.red.transport.behavior.ridebehavior.RidePossibly;
+import com.redcompany.red.transport.typesoftransport.general.Vehicle;
 
 public class Plane extends Vehicle {
 
