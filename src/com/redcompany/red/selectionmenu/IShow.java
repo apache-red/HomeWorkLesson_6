@@ -3,9 +3,10 @@ package com.redcompany.red.selectionmenu;
 interface IShow {
 
 
-    public void showMainMenu();
-    public void showSelect1();
-    public void showSelect5();
+    void showMainMenu();
+    void showSelect1();
+    void showSelect1_2();
+    void showSelect5();
 
 
 

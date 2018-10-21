@@ -7,8 +7,8 @@ import com.redcompany.red.transport.typesoftransport.general.Vehicle;
 
 public class Plane extends Vehicle {
 
-    private double ticketPrice =1000;
-    private int speed = 800;
+    private double ticketPrice;
+    private int speed;
 
 
 

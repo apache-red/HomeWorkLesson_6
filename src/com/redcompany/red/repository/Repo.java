@@ -61,9 +61,4 @@ public class Repo {
     }
 
 
-    public Repo createRepo(){
-        Repo repo = new Repo();
-        return repo;
-    }
-
 }

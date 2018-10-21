@@ -1,24 +1,13 @@
 package com.redcompany.red.builder;
 
 import com.redcompany.red.transport.typesoftransport.automobile.Bus;
-import com.redcompany.red.transport.typesoftransport.general.Vehicle;
-
-import javax.xml.crypto.Data;
 
 public class BusBuilder extends  VehicleBuilder{
 
+    private Bus bus;
 
-     protected Bus bus;
-
-
-
-
-
-     public Bus getBus() {
-        return bus;
+    public BusBuilder() {
     }
-
-
 
     public void createNewVehicle() {
         this.bus = new Bus();
@@ -41,26 +30,19 @@ public class BusBuilder extends  VehicleBuilder{
     public void buildMileage() {
         bus.setMileage(0);
     }
-
-
-
     @Override
     public void buildPersonalTransport() {
         this.bus.setPersonalTransport(false);
     }
-
     @Override
     public void buildSpeed() {
         bus.setSpeed(180);
     }
-
     @Override
     public void buildTicketPrice() {
         bus.setTicketPrice(0.65);
-
     }
 
-    @Override
     public Bus getVehicle() {
         return bus;
     }

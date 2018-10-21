@@ -5,12 +5,15 @@ import com.redcompany.red.builder.BusBuilder;
 import com.redcompany.red.builder.VehicleBuilder;
 import com.redcompany.red.transport.typesoftransport.automobile.Bus;
 import com.redcompany.red.transport.typesoftransport.general.Vehicle;
+import com.redcompany.red.selectionmenu.Menu;
 
 public class Director {
 
        protected VehicleBuilder vehicleBuilder;
        protected BusBuilder busBuilder;
 
+    public Director() {
+    }
 
     public void setVehicleBuilder(VehicleBuilder vb) { vehicleBuilder = vb; }
 
@@ -32,6 +35,16 @@ public class Director {
         busBuilder.buildMileage();
         busBuilder.buildTicketPrice();
     }
+
+
+    public Director createNewDirector(){
+        Director director = new Director();
+        return director;
+    }
+
+
+
+
 
 
 

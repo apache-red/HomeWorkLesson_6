@@ -12,11 +12,6 @@ public class Bus extends Vehicle {
     private int startYearOfUse;
     private  int mileage;
 
-
-
-
-
-
     @Override
     public void go() {
         System.out.println("Bus picking up speed");
@@ -77,9 +72,6 @@ public class Bus extends Vehicle {
                 ", personalTransport=" + isPersonalTransport() +
                 ", speed=" + getSpeed() +
                 ", ticketPrice=" + getTicketPrice() +
-                "iFlyVehicle=" + iFlyVehicle +
-                ", iRideBehavior=" + iRideBehavior +
-                ", iSwimBehavior=" + iSwimBehavior +
                 '}';
     }
 
