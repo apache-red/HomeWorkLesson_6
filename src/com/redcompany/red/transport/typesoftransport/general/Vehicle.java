@@ -108,20 +108,7 @@ protected Vehicle (){
         return  speed * KM_PER_MILE ;
     }
 
-//    public  double convertSpeedFromKmToMiles(){
-//        return speed = speed * KM_PER_MILE;
-//
-//    }
 
-//    public  String convertFuelFromLitersToGallons(){
-//
-//    return "Fuel = "+ (fuel = fuel / LITERS_PER_GALLONS) + "/gal";
-//    }
-//
-//    public  String convertFuelFromGallonsToLiters(){
-//        return "Fuel = "+ (fuel = fuel * LITERS_PER_GALLONS) + "/lit";
-//
-//    }
 
 
 
