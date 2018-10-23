@@ -10,12 +10,20 @@ public abstract class Vehicle {
     protected IRideBehavior iRideBehavior;
     protected ISwimBehavior iSwimBehavior;
 
+    public double fuel;
+    public static int countTransport;
 
+    private final double KM_PER_MILE = 1.60934;
     private boolean personalTransport;
-    private int speed;
+    private double speed;
     private double ticketPrice;
+    private int idTransport;
 
+protected Vehicle (){
+    countTransport++;
+    this.idTransport = countTransport;
 
+}
 
 
     public  Vehicle getVehicle(){
@@ -51,11 +59,11 @@ public abstract class Vehicle {
         this.ticketPrice = ticketPrice;
     }
 
-    public int getSpeed() {
+    public double getSpeed() {
         return speed;
     }
 
-    public void setSpeed(int speed) {
+    public void setSpeed(double speed) {
         this.speed = speed;
     }
 
@@ -90,6 +98,30 @@ public abstract class Vehicle {
     public void setPersonalTransport(boolean personalTransport) {
         this.personalTransport = personalTransport;
     }
+
+    public int getIdTransport() {
+        return idTransport;
+    }
+
+    public  double convertSpeedFromMilesToKm(){
+
+        return  speed * KM_PER_MILE ;
+    }
+
+//    public  double convertSpeedFromKmToMiles(){
+//        return speed = speed * KM_PER_MILE;
+//
+//    }
+
+//    public  String convertFuelFromLitersToGallons(){
+//
+//    return "Fuel = "+ (fuel = fuel / LITERS_PER_GALLONS) + "/gal";
+//    }
+//
+//    public  String convertFuelFromGallonsToLiters(){
+//        return "Fuel = "+ (fuel = fuel * LITERS_PER_GALLONS) + "/lit";
+//
+//    }
 
 
 

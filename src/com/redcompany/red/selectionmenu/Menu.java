@@ -19,6 +19,8 @@ public class Menu {
     private Repo repo;
     private Bus bus;
 
+    public static boolean KmOrMiles = true;
+
     public Menu() {
         this.director = new Director();
         this.repo = new Repo();
@@ -37,6 +39,9 @@ public class Menu {
             case 1:
                 ishowMenu.showSelect1();
                 choseActionSelect1(iListenerInput.writeAction());
+                break;
+            case 4:
+                changeKMOrMiles();
                 break;
             case 5:
                 ishowMenu.showSelect5();
@@ -139,5 +144,15 @@ public class Menu {
         repo.addTransportToList(plane2);
 
     }
+
+    public static void changeKMOrMiles(){
+        System.out.println("Value changed");
+       if(KmOrMiles == true){
+           KmOrMiles= false;
+       }else {
+           KmOrMiles = true;
+       }
+    }
+
 
 }

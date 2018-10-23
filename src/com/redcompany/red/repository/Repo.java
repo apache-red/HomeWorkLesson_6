@@ -1,6 +1,8 @@
 package com.redcompany.red.repository;
 
 
+import com.redcompany.red.selectionmenu.Menu;
+import com.redcompany.red.transport.typesoftransport.air.Plane;
 import com.redcompany.red.transport.typesoftransport.general.Vehicle;
 
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.Comparator;
 
 
 public class Repo {
-
+    private Plane plane;
     private ArrayList<Vehicle> transportList = new <Vehicle>ArrayList();
 
 
@@ -21,9 +23,20 @@ public class Repo {
     public void showTransportList() {
         System.out.println("Quantity objects= " + transportList.size());
         for (int i = 0; i < transportList.size(); i++) {
-            System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
-                    + ", ticket price=" + transportList.get(i).getTicketPrice()
-                    + ", speed="+ transportList.get(i).getSpeed());
+            // костыль, так как не хочется создатьвать билдер для Plane
+            if (transportList.get(i) instanceof Plane){
+                System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
+                        + ", ticket price=" + transportList.get(i).getTicketPrice());
+            }
+            else if(Menu.KmOrMiles == true ){
+                System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
+                        + ", ticket price=" + transportList.get(i).getTicketPrice()
+                        + ", speed="+ transportList.get(i).getSpeed()+"/KM, ");
+            }else {
+                System.out.println("Vechicle №" + (i + 1) + " : " + transportList.get(i)
+                        + ", ticket price=" + transportList.get(i).getTicketPrice()
+                        + ", speed="+ transportList.get(i).convertSpeedFromMilesToKm()+"/MILES, ");
+            }
 
         }
     }

@@ -6,6 +6,7 @@ public class ShowMenu implements IShow{
     public void showMainMenu(){
         System.out.println("Select an action. Enter the number 1....");
         System.out.println("1. Select to create a vehicle. (WORKS!!!)");
+        System.out.println("4. Change speed unit KM/H & MILES/H (WORKS!!!)");
         System.out.println("5. Sort vehicle lists. (WORKS!!!)");
         System.out.println("6. Show All Array. (WORKS!!!)");
         System.out.println("0. Stop program. (WORKS!!!)");

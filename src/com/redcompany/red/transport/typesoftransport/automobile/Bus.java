@@ -61,18 +61,22 @@ public class Bus extends Vehicle {
         this.mileage = mileage;
     }
 
+
     @Override
     public String toString() {
         return "Bus{" +
-                "busNumber='" + busNumber + '\'' +
+                "ID Transport="+getIdTransport()+
+                ", busNumber='" + busNumber + '\'' +
                 ", routeNumber=" + routeNumber +
                 ", brand='" + brand + '\'' +
                 ", startYearOfUse=" + startYearOfUse +
                 ", mileage=" + mileage +
                 ", personalTransport=" + isPersonalTransport() +
-                ", speed=" + getSpeed() +
-                ", ticketPrice=" + getTicketPrice() +
+//                ", speed=" + getSpeed() +
+ //               ", ticketPrice=" + getTicketPrice() +
                 '}';
     }
+
+
 
 }

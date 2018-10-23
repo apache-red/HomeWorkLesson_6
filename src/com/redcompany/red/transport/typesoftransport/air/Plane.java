@@ -1,6 +1,7 @@
 package com.redcompany.red.transport.typesoftransport.air;
 
 
+import com.redcompany.red.selectionmenu.Menu;
 import com.redcompany.red.transport.behavior.flybehavior.FlyPossibly;
 import com.redcompany.red.transport.behavior.ridebehavior.RidePossibly;
 import com.redcompany.red.transport.typesoftransport.general.Vehicle;
@@ -8,7 +9,8 @@ import com.redcompany.red.transport.typesoftransport.general.Vehicle;
 public class Plane extends Vehicle {
 
     private double ticketPrice;
-    private int speed;
+    private double speed;
+    private String crutch;
 
 
 
@@ -52,17 +54,31 @@ public class Plane extends Vehicle {
 
 
     @Override
-    public int getSpeed() {
-        return speed;
+    public double getSpeed() {
+// костыль
+        if(Menu.KmOrMiles == true){
+            crutch = "/KM, ";
+            return speed  ;
+        }else {
+            crutch = "/MILES, ";
+            return speed * 1.60934;
+        }
+
     }
 
     @Override
-    public void setSpeed(int speed) {
+    public void setSpeed(double speed) {
         this.speed = speed;
     }
 
     @Override
     public String toString() {
-        return "Plane";
+        return "Plane{" +
+                "ID Transport="+getIdTransport()+'\''+
+                ", speed=" + getSpeed() +crutch+
+               ", ticketPrice=" + getTicketPrice() +
+                '}';
+
     }
+
 }

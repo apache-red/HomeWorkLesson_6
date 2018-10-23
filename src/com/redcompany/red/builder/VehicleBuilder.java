@@ -18,16 +18,6 @@ public abstract class VehicleBuilder {
     public abstract void buildSpeed();
 
     public abstract void buildTicketPrice();
-//
-//    public abstract void createNewVehicle();
-//
-//    public abstract void buildBrand();
-//
-//    public abstract void buildBusNumber();
-//
-//    public abstract void buildRouteNumber();
-//
-//    public abstract void buildStartYearOfUse();
-//
-//    public abstract void buildMileage();
+
+
 }
