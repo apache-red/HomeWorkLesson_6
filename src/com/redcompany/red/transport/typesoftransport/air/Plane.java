@@ -61,7 +61,7 @@ public class Plane extends Vehicle {
             return speed  ;
         }else {
             crutch = "/MILES, ";
-            return speed * 1.60934;
+            return speed / 1.60934;
         }
 
     }

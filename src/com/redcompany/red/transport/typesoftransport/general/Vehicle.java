@@ -105,7 +105,7 @@ protected Vehicle (){
 
     public  double convertSpeedFromMilesToKm(){
 
-        return  speed * KM_PER_MILE ;
+        return  speed / KM_PER_MILE ;
     }
 
 
